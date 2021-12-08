@@ -29,4 +29,12 @@ class CaesarTest {
         System.out.println(encrypted);
         assertEquals("fqrf", encrypted);
     }
+
+    @Test
+    void encryptsWithWhiteSpace() {
+        Encryption encryption = new Caesar(83);
+        String encrypted = encryption.encrypts("alma körte");
+        System.out.println(encrypted);
+        assertEquals("fqrf pywyj", encrypted);
+    }
 }
